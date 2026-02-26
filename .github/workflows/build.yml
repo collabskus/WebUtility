@@ -31,11 +31,10 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Test
-        # xunit.v3's MTP runner uses its own flag names, not the generic
-        # Microsoft.Testing.Platform extension names.
-        #   --report-xunit-trx  (not --report-trx)
+        # xunit.v3's MTP runner uses its own flag names:
+        #   --report-xunit-trx          (not --report-trx)
         #   --report-xunit-trx-filename (not --report-trx-filename)
-        # Coverage is collected via coverlet.collector using --collect.
+        # Coverage via coverlet.collector using --collect.
         run: >
           dotnet test
           --no-build

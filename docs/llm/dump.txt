@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 12:18:25
+Generated: 02/26/2026 12:23:12
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -157,6 +157,7 @@ D:\DEV\PERSONAL\WEBUTILITY
     |           |       log_260226171729637.diag
     |           |       log_260226171742537.diag
     |           |       log_260226171742731.diag
+    |           |       log_260226172252176.diag
     |           |       
     |           +---pl
     |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
@@ -233,8 +234,8 @@ FILE CONTENTS:
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\.github\workflows\build.yml
-SIZE: 1.46 KB
-MODIFIED: 02/26/2026 12:18:23
+SIZE: 1.38 KB
+MODIFIED: 02/26/2026 12:23:01
 ================================================================================
 
 name: CI
@@ -270,11 +271,10 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Test
-        # xunit.v3's MTP runner uses its own flag names, not the generic
-        # Microsoft.Testing.Platform extension names.
-        #   --report-xunit-trx  (not --report-trx)
+        # xunit.v3's MTP runner uses its own flag names:
+        #   --report-xunit-trx          (not --report-trx)
         #   --report-xunit-trx-filename (not --report-trx-filename)
-        # Coverage is collected via coverlet.collector using --collect.
+        # Coverage via coverlet.collector using --collect.
         run: >
           dotnet test
           --no-build
@@ -788,8 +788,8 @@ $RECYCLE.BIN/
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\Directory.Packages.props
-SIZE: 0.84 KB
-MODIFIED: 02/26/2026 11:33:59
+SIZE: 0.79 KB
+MODIFIED: 02/26/2026 12:22:31
 ================================================================================
 
 <Project>
@@ -807,10 +807,10 @@ MODIFIED: 02/26/2026 11:33:59
   <ItemGroup>
     <!-- Test packages -->
     <PackageVersion Include="coverlet.collector" Version="8.0.0" />
-    <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
   </ItemGroup>
 </Project>
+
 
 
 ================================================================================
@@ -1548,8 +1548,8 @@ public class CalculatorTests
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\WebUtility.Tests\WebUtility.Tests.csproj
-SIZE: 1.06 KB
-MODIFIED: 02/26/2026 12:12:54
+SIZE: 0.85 KB
+MODIFIED: 02/26/2026 12:22:47
 ================================================================================
 
 <Project Sdk="Microsoft.NET.Sdk">
@@ -1567,11 +1567,7 @@ MODIFIED: 02/26/2026 12:12:54
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="xunit.v3" />
-    <PackageReference Include="xunit.v3.mtp-v2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="xunit.v3.mtp-v2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebUtility\WebUtility.csproj" />
@@ -1622,7 +1618,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 12:18:27
+EXPORT COMPLETED: 02/26/2026 12:23:13
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
