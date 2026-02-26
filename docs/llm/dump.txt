@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 13:58:37
+Generated: 02/26/2026 13:59:50
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -650,8 +650,8 @@ $RECYCLE.BIN/
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\Directory.Packages.props
-SIZE: 0.79 KB
-MODIFIED: 02/26/2026 12:22:31
+SIZE: 0.78 KB
+MODIFIED: 02/26/2026 13:59:17
 ================================================================================
 
 <Project>
@@ -668,11 +668,10 @@ MODIFIED: 02/26/2026 12:22:31
   </PropertyGroup>
   <ItemGroup>
     <!-- Test packages -->
-    <PackageVersion Include="coverlet.collector" Version="8.0.0" />
+    <PackageVersion Include="coverlet.msbuild" Version="8.0.0" />
     <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
   </ItemGroup>
 </Project>
-
 
 
 ================================================================================
@@ -1411,7 +1410,7 @@ public class CalculatorTests
 ================================================================================
 FILE: :\DEV\personal\WebUtility\WebUtility.Tests\WebUtility.Tests.csproj
 SIZE: 0.85 KB
-MODIFIED: 02/26/2026 12:22:47
+MODIFIED: 02/26/2026 13:59:28
 ================================================================================
 
 <Project Sdk="Microsoft.NET.Sdk">
@@ -1425,7 +1424,7 @@ MODIFIED: 02/26/2026 12:22:47
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="coverlet.collector">
+    <PackageReference Include="coverlet.msbuild">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -1480,7 +1479,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 13:58:38
+EXPORT COMPLETED: 02/26/2026 13:59:51
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
