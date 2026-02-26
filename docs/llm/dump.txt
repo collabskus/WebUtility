@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 12:01:05
+Generated: 02/26/2026 12:03:14
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -142,6 +142,12 @@ D:\DEV\PERSONAL\WEBUTILITY
     |           |       log_260226165353630.diag
     |           |       log_260226165353679.diag
     |           |       log_260226165405510.diag
+    |           |       log_260226170125251.diag
+    |           |       log_260226170125903.diag
+    |           |       log_260226170232355.diag
+    |           |       log_260226170232462.diag
+    |           |       log_260226170235842.diag
+    |           |       log_260226170246432.diag
     |           |       
     |           +---pl
     |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
@@ -1534,8 +1540,8 @@ public class CalculatorTests
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\WebUtility.Tests\WebUtility.Tests.csproj
-SIZE: 1.38 KB
-MODIFIED: 02/26/2026 12:00:47
+SIZE: 1.41 KB
+MODIFIED: 02/26/2026 12:02:07
 ================================================================================
 
 <Project Sdk="Microsoft.NET.Sdk">
@@ -1545,6 +1551,7 @@ MODIFIED: 02/26/2026 12:00:47
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <OutputType>Exe</OutputType>
     <!--
       TestingPlatformDotnetTestSupport was the MTP v1 opt-in mechanism.
       For MTP v2 on .NET 10 SDK, the correct opt-in is global.json:
@@ -1614,7 +1621,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 12:01:06
+EXPORT COMPLETED: 02/26/2026 12:03:15
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
