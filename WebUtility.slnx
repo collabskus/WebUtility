@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WebUtility.Tests/WebUtility.Tests.csproj" />
+  <Project Path="WebUtility/WebUtility.csproj" />
+</Solution>
