@@ -31,13 +31,22 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Test
+        # global.json sets "test.runner": "Microsoft.Testing.Platform", which tells the
+        # .NET 10 SDK to use the MTP-based dotnet test pipeline instead of the legacy
+        # VSTest pipeline. With that in place, dotnet test works without any special flags.
+        # Arguments after -- are forwarded directly to the MTP runner:
+        #   --report-trx        → produces a TRX results file
+        #   --coverage          → MTP-native coverage (replaces VSTest --collect)
         run: >
           dotnet test
           --no-build
           --configuration Release
           --results-directory TestResults
-          --collect "XPlat Code Coverage"
-          --logger "trx;LogFileName=results.trx"
+          --
+          --report-trx
+          --report-trx-filename results.trx
+          --coverage
+          --coverage-output-dir TestResults/Coverage
 
       - name: Upload test results
         if: always()
