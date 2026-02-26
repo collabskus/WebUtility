@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 12:23:12
+Generated: 02/26/2026 13:23:29
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -28,45 +28,10 @@ D:\DEV\PERSONAL\WEBUTILITY
 |           .gitkeep
 |           dump.txt
 |           
-+---TestResults
 +---WebUtility
-|   |   Calculator.cs
-|   |   WebUtility.csproj
-|   |   
-|   +---bin
-|   |   \---Debug
-|   |       \---net10.0
-|   |               WebUtility.deps.json
-|   |               WebUtility.dll
-|   |               WebUtility.pdb
-|   |               
-|   \---obj
-|       |   project.assets.json
-|       |   project.nuget.cache
-|       |   WebUtility.csproj.nuget.dgspec.json
-|       |   WebUtility.csproj.nuget.g.props
-|       |   WebUtility.csproj.nuget.g.targets
-|       |   
-|       \---Debug
-|           \---net10.0
-|               |   .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
-|               |   WebUtility.AssemblyInfo.cs
-|               |   WebUtility.AssemblyInfoInputs.cache
-|               |   WebUtility.assets.cache
-|               |   WebUtility.csproj.CoreCompileInputs.cache
-|               |   WebUtility.csproj.FileListAbsolute.txt
-|               |   WebUtility.dll
-|               |   WebUtility.GeneratedMSBuildEditorConfig.editorconfig
-|               |   WebUtility.GlobalUsings.g.cs
-|               |   WebUtility.pdb
-|               |   WebUtility.sourcelink.json
-|               |   
-|               +---ref
-|               |       WebUtility.dll
-|               |       
-|               \---refint
-|                       WebUtility.dll
-|                       
+|       Calculator.cs
+|       WebUtility.csproj
+|       
 \---WebUtility.Tests
     |   CalculatorTests.cs
     |   WebUtility.Tests.csproj
@@ -74,159 +39,13 @@ D:\DEV\PERSONAL\WEBUTILITY
     +---bin
     |   \---Debug
     |       \---net10.0
-    |           |   CoverletSourceRootsMapping_WebUtility.Tests
-    |           |   Microsoft.ApplicationInsights.dll
-    |           |   Microsoft.Bcl.AsyncInterfaces.dll
-    |           |   Microsoft.Testing.Extensions.MSBuild.dll
-    |           |   Microsoft.Testing.Extensions.Telemetry.dll
-    |           |   Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
-    |           |   Microsoft.Testing.Platform.dll
-    |           |   WebUtility.dll
-    |           |   WebUtility.pdb
-    |           |   WebUtility.Tests.deps.json
-    |           |   WebUtility.Tests.dll
-    |           |   WebUtility.Tests.exe
-    |           |   WebUtility.Tests.pdb
-    |           |   WebUtility.Tests.runtimeconfig.json
-    |           |   xunit.abstractions.dll
-    |           |   xunit.v3.assert.dll
-    |           |   xunit.v3.common.dll
-    |           |   xunit.v3.core.dll
-    |           |   xunit.v3.mtp-v1.dll
-    |           |   xunit.v3.mtp-v2.dll
-    |           |   xunit.v3.runner.common.dll
-    |           |   xunit.v3.runner.inproc.console.dll
-    |           |   xunit.v3.runner.utility.netcore.dll
-    |           |   
-    |           +---cs
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---de
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---es
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---fr
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---it
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---ja
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---ko
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---Log
-    |           |       log_260226164305192.diag
-    |           |       log_260226164310941.diag
-    |           |       log_260226164311687.diag
-    |           |       log_260226164811317.diag
-    |           |       log_260226164835116.diag
-    |           |       log_260226165335153.diag
-    |           |       log_260226165335188.diag
-    |           |       log_260226165353630.diag
-    |           |       log_260226165353679.diag
-    |           |       log_260226165405510.diag
-    |           |       log_260226170125251.diag
-    |           |       log_260226170125903.diag
-    |           |       log_260226170232355.diag
-    |           |       log_260226170232462.diag
-    |           |       log_260226170235842.diag
-    |           |       log_260226170246432.diag
-    |           |       log_260226171216777.diag
-    |           |       log_260226171441646.diag
-    |           |       log_260226171441674.diag
-    |           |       log_260226171729517.diag
-    |           |       log_260226171729637.diag
-    |           |       log_260226171742537.diag
-    |           |       log_260226171742731.diag
-    |           |       log_260226172252176.diag
-    |           |       
-    |           +---pl
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---pt-BR
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---ru
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---TestResults
-    |           +---tr
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           +---zh-Hans
-    |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |           |       Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |           |       Microsoft.Testing.Platform.resources.dll
-    |           |       
-    |           \---zh-Hant
-    |                   Microsoft.Testing.Extensions.MSBuild.resources.dll
-    |                   Microsoft.Testing.Extensions.Telemetry.resources.dll
-    |                   Microsoft.Testing.Platform.resources.dll
-    |                   
     \---obj
-        |   project.assets.json
-        |   project.nuget.cache
-        |   WebUtility.Tests.csproj.nuget.dgspec.json
-        |   WebUtility.Tests.csproj.nuget.g.props
-        |   WebUtility.Tests.csproj.nuget.g.targets
-        |   
         \---Debug
             \---net10.0
-                |   .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
-                |   apphost.exe
-                |   SelfRegisteredExtensions.cs
-                |   WebUtili.C196B21D.Up2Date
-                |   WebUtility.Tests.AssemblyInfo.cs
-                |   WebUtility.Tests.AssemblyInfoInputs.cache
-                |   WebUtility.Tests.assets.cache
-                |   WebUtility.Tests.csproj.AssemblyReference.cache
-                |   WebUtility.Tests.csproj.BuildWithSkipAnalyzers
-                |   WebUtility.Tests.csproj.CoreCompileInputs.cache
-                |   WebUtility.Tests.csproj.FileListAbsolute.txt
-                |   WebUtility.Tests.dll
-                |   WebUtility.Tests.genautoregisteredextensionsinputcache.cache
-                |   WebUtility.Tests.GeneratedMSBuildEditorConfig.editorconfig
-                |   WebUtility.Tests.genruntimeconfig.cache
-                |   WebUtility.Tests.gentestingplatformentrypointinputcache.cache
                 |   WebUtility.Tests.GlobalUsings.g.cs
-                |   WebUtility.Tests.pdb
-                |   WebUtility.Tests.sourcelink.json
-                |   WebUtility.Tests.xUnit.v3.EntryPoint.cache
-                |   XunitAutoGeneratedEntryPoint.cs
                 |   
                 +---ref
-                |       WebUtility.Tests.dll
-                |       
                 \---refint
-                        WebUtility.Tests.dll
-                        
 
 
 FILE CONTENTS:
@@ -1618,7 +1437,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 12:23:13
+EXPORT COMPLETED: 02/26/2026 13:23:29
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
