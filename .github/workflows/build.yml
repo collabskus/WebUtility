@@ -30,23 +30,23 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --configuration Release
 
-      - name: Test
-        # global.json sets "test.runner": "Microsoft.Testing.Platform", which tells the
-        # .NET 10 SDK to use the MTP-based dotnet test pipeline instead of the legacy
-        # VSTest pipeline. With that in place, dotnet test works without any special flags.
-        # Arguments after -- are forwarded directly to the MTP runner:
-        #   --report-trx        → produces a TRX results file
-        #   --coverage          → MTP-native coverage (replaces VSTest --collect)
+      - name: Test with Coverage
+        # xunit.v3's MTP runner uses its own flag names (not the generic MTP ones):
+        #   --report-xunit-trx          (not --report-trx)
+        #   --report-xunit-trx-filename (not --report-trx-filename)
+        # Coverage is handled by coverlet.msbuild via /p: properties.
+        # Do NOT pass --coverage (requires Microsoft.Testing.Extensions.CodeCoverage).
         run: >
           dotnet test
           --no-build
           --configuration Release
           --results-directory TestResults
+          /p:CollectCoverage=true
+          /p:CoverletOutputFormat=cobertura
+          /p:CoverletOutput=../TestResults/coverage.cobertura.xml
           --
-          --report-trx
-          --report-trx-filename results.trx
-          --coverage
-          --coverage-output-dir TestResults/Coverage
+          --report-xunit-trx
+          --report-xunit-trx-filename results.trx
 
       - name: Upload test results
         if: always()
