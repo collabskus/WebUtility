@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <OutputType>Exe</OutputType>
     <!--
       TestingPlatformDotnetTestSupport was the MTP v1 opt-in mechanism.
       For MTP v2 on .NET 10 SDK, the correct opt-in is global.json:
