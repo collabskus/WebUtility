@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 12:06:04
+Generated: 02/26/2026 12:18:25
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -150,6 +150,13 @@ D:\DEV\PERSONAL\WEBUTILITY
     |           |       log_260226170232462.diag
     |           |       log_260226170235842.diag
     |           |       log_260226170246432.diag
+    |           |       log_260226171216777.diag
+    |           |       log_260226171441646.diag
+    |           |       log_260226171441674.diag
+    |           |       log_260226171729517.diag
+    |           |       log_260226171729637.diag
+    |           |       log_260226171742537.diag
+    |           |       log_260226171742731.diag
     |           |       
     |           +---pl
     |           |       Microsoft.Testing.Extensions.MSBuild.resources.dll
@@ -199,6 +206,7 @@ D:\DEV\PERSONAL\WEBUTILITY
                 |   WebUtility.Tests.AssemblyInfoInputs.cache
                 |   WebUtility.Tests.assets.cache
                 |   WebUtility.Tests.csproj.AssemblyReference.cache
+                |   WebUtility.Tests.csproj.BuildWithSkipAnalyzers
                 |   WebUtility.Tests.csproj.CoreCompileInputs.cache
                 |   WebUtility.Tests.csproj.FileListAbsolute.txt
                 |   WebUtility.Tests.dll
@@ -225,8 +233,8 @@ FILE CONTENTS:
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\.github\workflows\build.yml
-SIZE: 1.64 KB
-MODIFIED: 02/26/2026 12:01:01
+SIZE: 1.46 KB
+MODIFIED: 02/26/2026 12:18:23
 ================================================================================
 
 name: CI
@@ -262,22 +270,20 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Test
-        # global.json sets "test.runner": "Microsoft.Testing.Platform", which tells the
-        # .NET 10 SDK to use the MTP-based dotnet test pipeline instead of the legacy
-        # VSTest pipeline. With that in place, dotnet test works without any special flags.
-        # Arguments after -- are forwarded directly to the MTP runner:
-        #   --report-trx        → produces a TRX results file
-        #   --coverage          → MTP-native coverage (replaces VSTest --collect)
+        # xunit.v3's MTP runner uses its own flag names, not the generic
+        # Microsoft.Testing.Platform extension names.
+        #   --report-xunit-trx  (not --report-trx)
+        #   --report-xunit-trx-filename (not --report-trx-filename)
+        # Coverage is collected via coverlet.collector using --collect.
         run: >
           dotnet test
           --no-build
           --configuration Release
           --results-directory TestResults
+          --collect "XPlat Code Coverage"
           --
-          --report-trx
-          --report-trx-filename results.trx
-          --coverage
-          --coverage-output-dir TestResults/Coverage
+          --report-xunit-trx
+          --report-xunit-trx-filename results.trx
 
       - name: Upload test results
         if: always()
@@ -1542,8 +1548,8 @@ public class CalculatorTests
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\WebUtility.Tests\WebUtility.Tests.csproj
-SIZE: 1.41 KB
-MODIFIED: 02/26/2026 12:02:07
+SIZE: 1.06 KB
+MODIFIED: 02/26/2026 12:12:54
 ================================================================================
 
 <Project Sdk="Microsoft.NET.Sdk">
@@ -1554,13 +1560,6 @@ MODIFIED: 02/26/2026 12:02:07
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <OutputType>Exe</OutputType>
-    <!--
-      TestingPlatformDotnetTestSupport was the MTP v1 opt-in mechanism.
-      For MTP v2 on .NET 10 SDK, the correct opt-in is global.json:
-        { "test": { "runner": "Microsoft.Testing.Platform" } }
-      This property is kept here only for IDE backward compatibility
-      (e.g., older Rider or VS versions that still look for it).
-    -->
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
@@ -1623,7 +1622,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 12:06:05
+EXPORT COMPLETED: 02/26/2026 12:18:27
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
