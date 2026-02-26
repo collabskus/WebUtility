@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 12:03:14
+Generated: 02/26/2026 12:06:04
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -15,6 +15,8 @@ D:\DEV\PERSONAL\WEBUTILITY
 |   Directory.Packages.props
 |   Export.ps1
 |   global.json
+|   LICENSE
+|   README.md
 |   WebUtility.slnx
 |   
 +---.github
@@ -1621,7 +1623,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 12:03:15
+EXPORT COMPLETED: 02/26/2026 12:06:05
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
