@@ -1,7 +1,7 @@
 
 ===============================================================================
 ASP.NET PROJECT EXPORT
-Generated: 02/26/2026 13:23:29
+Generated: 02/26/2026 13:52:11
 Project Path: D:\DEV\personal\WebUtility
 ===============================================================================
 
@@ -29,9 +29,23 @@ D:\DEV\PERSONAL\WEBUTILITY
 |           dump.txt
 |           
 +---WebUtility
-|       Calculator.cs
-|       WebUtility.csproj
-|       
+|   |   Calculator.cs
+|   |   WebUtility.csproj
+|   |   
+|   +---bin
+|   |   \---Debug
+|   |       \---net10.0
+|   \---obj
+|       \---Debug
+|           \---net10.0
+|               |   .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+|               |   WebUtility.AssemblyInfo.cs
+|               |   WebUtility.AssemblyInfoInputs.cache
+|               |   WebUtility.GeneratedMSBuildEditorConfig.editorconfig
+|               |   WebUtility.GlobalUsings.g.cs
+|               |   
+|               +---ref
+|               \---refint
 \---WebUtility.Tests
     |   CalculatorTests.cs
     |   WebUtility.Tests.csproj
@@ -42,6 +56,10 @@ D:\DEV\PERSONAL\WEBUTILITY
     \---obj
         \---Debug
             \---net10.0
+                |   .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+                |   WebUtility.Tests.AssemblyInfo.cs
+                |   WebUtility.Tests.AssemblyInfoInputs.cache
+                |   WebUtility.Tests.GeneratedMSBuildEditorConfig.editorconfig
                 |   WebUtility.Tests.GlobalUsings.g.cs
                 |   
                 +---ref
@@ -53,8 +71,8 @@ FILE CONTENTS:
 
 ================================================================================
 FILE: :\DEV\personal\WebUtility\.github\workflows\build.yml
-SIZE: 1.38 KB
-MODIFIED: 02/26/2026 12:23:01
+SIZE: 1.64 KB
+MODIFIED: 02/26/2026 13:51:17
 ================================================================================
 
 name: CI
@@ -90,19 +108,22 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Test
-        # xunit.v3's MTP runner uses its own flag names:
-        #   --report-xunit-trx          (not --report-trx)
-        #   --report-xunit-trx-filename (not --report-trx-filename)
-        # Coverage via coverlet.collector using --collect.
+        # global.json sets "test.runner": "Microsoft.Testing.Platform", which tells the
+        # .NET 10 SDK to use the MTP-based dotnet test pipeline instead of the legacy
+        # VSTest pipeline. With that in place, dotnet test works without any special flags.
+        # Arguments after -- are forwarded directly to the MTP runner:
+        #   --report-trx        → produces a TRX results file
+        #   --coverage          → MTP-native coverage (replaces VSTest --collect)
         run: >
           dotnet test
           --no-build
           --configuration Release
           --results-directory TestResults
-          --collect "XPlat Code Coverage"
           --
-          --report-xunit-trx
-          --report-xunit-trx-filename results.trx
+          --report-trx
+          --report-trx-filename results.trx
+          --coverage
+          --coverage-output-dir TestResults/Coverage
 
       - name: Upload test results
         if: always()
@@ -635,7 +656,7 @@ MODIFIED: 02/26/2026 12:22:31
 ================================================================================
 FILE: :\DEV\personal\WebUtility\global.json
 SIZE: 0.07 KB
-MODIFIED: 02/26/2026 12:00:27
+MODIFIED: 02/26/2026 13:50:39
 ================================================================================
 
 {
@@ -1437,7 +1458,7 @@ MODIFIED: 02/26/2026 11:21:41
 
 
 ===============================================================================
-EXPORT COMPLETED: 02/26/2026 13:23:29
+EXPORT COMPLETED: 02/26/2026 13:52:11
 Total Files Exported: 8
 Output File: .\docs\llm\dump.txt
 ===============================================================================
